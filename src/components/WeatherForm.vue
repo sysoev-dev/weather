@@ -3,6 +3,8 @@ import { ref } from 'vue';
 import { getWeatherData } from '@/api/weather-api';
 import { useWeatherData } from '@/stores/weather-data';
 import { storage } from '@/utils/storage';
+import IconSearch from '@/components/icons/IconSearch.vue';
+
 const store = useWeatherData()
 
 const inputText = ref('')
@@ -22,6 +24,7 @@ async function handleSubmitForm() {
       <input v-model="inputText" class="weather__form-input" type="search" name="search-input"
         placeholder="Введите город">
       <button class="weather__form-button" type="submit">
+        <IconSearch />
         Найти
       </button>
     </form>
@@ -37,11 +40,19 @@ async function handleSubmitForm() {
 
 .weather__form-input {
   flex-grow: 1;
-  padding: 5px;
+  padding: 7px;
   font-size: 16px;
   background-color: var(--vt-c-black);
   border: none;
   outline: none;
   color: var(--vt-c-white-mute);
+}
+
+.weather__form-button {
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 </style>

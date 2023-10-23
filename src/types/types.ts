@@ -3,6 +3,8 @@ export interface Data {
   country: string
   descr: string
   temp: number
+  feelsTemp: number
+  humidity: number
   wind: number
   pressure: number
   sunrise: string

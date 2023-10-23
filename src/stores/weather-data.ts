@@ -8,6 +8,8 @@ export const useWeatherData = defineStore('weatherData', () => {
     country: 'RU',
     descr: 'Cloud',
     temp: 27,
+    feelsTemp: 35,
+    humidity: 65,
     wind: 3,
     pressure: 787,
     sunrise: '07:00',

@@ -2,7 +2,8 @@
 import IconWind from '@/components/icons/IconWind.vue';
 import IconPressure from '@/components/icons/IconPressure.vue';
 import IconSunrise from '@/components/icons/IconSunrise.vue';
-
+import IconTemperature from '@/components/icons/IconTemperature.vue';
+import IconHumidity from '@/components/icons/IconHumidity.vue';
 import { useWeatherData } from '@/stores/weather-data';
 const store = useWeatherData();
 
@@ -41,21 +42,20 @@ const store = useWeatherData();
       </li>
     </ul>
 
-    <ul class="details__list">
-      <li class="details__item">
+    <ul class="details__list details__list--bottom">
+      <li class="details__item details__item--bottom">
         <h3 class="details__item-title">
-          1
+          Feels like
         </h3>
+        <IconTemperature />
+        <p>{{ store.data.feelsTemp }} °C</p>
       </li>
-      <li class="details__item">
+      <li class="details__item details__item--bottom">
         <h3 class="details__item-title">
-          2
+          Humidity
         </h3>
-      </li>
-      <li class="details__item">
-        <h3 class="details__item-title">
-          3
-        </h3>
+        <IconHumidity />
+        <p>{{ store.data.humidity }} %</p>
       </li>
     </ul>
   </div>
@@ -81,7 +81,7 @@ const store = useWeatherData();
   display: flex;
   gap: 10px;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .details__item {
@@ -91,6 +91,10 @@ const store = useWeatherData();
   border-radius: 8px;
   font-size: 14px;
   background-color: var(--vt-c-dark-mute);
+}
+
+.details__item--bottom {
+  width: 50%;
 }
 
 @media (max-width: 1040px) {

@@ -25,9 +25,6 @@ onMounted(async () => {
         <WeatheReview />
         <WeatheDetails />
       </div>
-      <div class="weather__row">
-        s
-      </div>
     </div>
   </main>
 </template>

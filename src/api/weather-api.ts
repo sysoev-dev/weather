@@ -20,6 +20,8 @@ export async function getWeatherData(cityName: string) {
         country: data.sys.country,
         descr: data.weather[0].description,
         temp: roundValue(data.main.temp),
+        humidity: data.main.humidity,
+        feelsTemp: roundValue(data.main.feels_like),
         wind: data.wind.speed,
         pressure: data.main.pressure,
         sunrise: convertTime(data.sys.sunrise),

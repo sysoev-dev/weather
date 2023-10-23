@@ -28,7 +28,7 @@ const store = useWeatherData();
 <style scoped>
 .weather__review {
   width: 30%;
-  margin-right: 15px;
+  margin-right: 10px;
   padding: 10px;
   border-radius: 10px;
   background-color: var(--vt-c-dark);

@@ -4,7 +4,11 @@ export function roundValue(value: number) {
 
 export function convertTime(utcTime: number) {
   const date = new Date(utcTime * 1000);
-  return `${date.getHours()}:${date.getMinutes()}`;
+
+  let hours;
+  let minutes;
+
+  return `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
 }
 
 export function convertIconPath(code: string) {
