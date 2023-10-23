@@ -10,5 +10,11 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest'
-  }
+  },
+  rules: {
+    'vue/attributes-order': ['error'],
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": 3
+    }]
+  },
 }

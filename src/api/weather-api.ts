@@ -25,7 +25,6 @@ export async function getWeatherData(cityName: string) {
         icon: convertIconPath(data.weather[0].icon),
         date: convertTime(data.dt)
       }
-
       return weatherData
     }
   } catch (error) {
