@@ -54,5 +54,10 @@ async function handleSubmitForm() {
   border: none;
   outline: none;
   cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.weather__form-button:hover {
+  opacity: 0.7;
 }
 </style>
