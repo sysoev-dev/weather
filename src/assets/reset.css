@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -12,6 +14,6 @@ body {
   font-size-adjust: none;
   font-size: 18px;
   min-height: 100vh;
-  background-color: var(--vt-c-black-mute);
+  background-color: var(--vt-c-black);
   color: var(--vt-c-white-mute);
 }

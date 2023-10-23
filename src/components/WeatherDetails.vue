@@ -62,6 +62,11 @@ const store = useWeatherData();
 </template>
 
 <style scoped>
+.details__title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
 .details {
   width: 70%;
   padding: 5px 10px;
@@ -86,5 +91,22 @@ const store = useWeatherData();
   border-radius: 8px;
   font-size: 14px;
   background-color: var(--vt-c-dark-mute);
+}
+
+@media (max-width: 1040px) {
+  .details {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .details__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details__item {
+    width: 100%;
+  }
 }
 </style>

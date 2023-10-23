@@ -7,7 +7,7 @@ export const useWeatherData = defineStore('weatherData', () => {
     city: 'Moscow',
     country: 'RU',
     descr: 'Cloud',
-    temp: 28,
+    temp: 27,
     wind: 3,
     pressure: 787,
     sunrise: '07:00',

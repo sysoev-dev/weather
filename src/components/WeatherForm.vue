@@ -2,12 +2,14 @@
 import { ref } from 'vue';
 import { getWeatherData } from '@/api/weather-api';
 import { useWeatherData } from '@/stores/weather-data';
+import { storage } from '@/utils/storage';
 const store = useWeatherData()
 
 const inputText = ref('')
 
 async function handleSubmitForm() {
   const cityName = inputText.value;
+  storage.setCurrentCity(cityName);
   const weatherData = getWeatherData(cityName);
   store.data = await weatherData;
   inputText.value = '';

@@ -1,8 +1,10 @@
-const API_KEY = '59fecd6bd3599df2ee4a3f003ce85f4a';
-const SERVER_URL = 'http://api.openweathermap.org';
-const WEATHER_LINK = `${SERVER_URL}/data/2.5/weather`
 import { roundValue, convertTime, convertIconPath } from "@/utils/utils";
 import type { Data } from "@/types/types";
+
+
+const API_KEY = '59fecd6bd3599df2ee4a3f003ce85f4a';
+const SERVER_URL = 'http://api.openweathermap.org';
+const WEATHER_LINK = `${SERVER_URL}/data/2.5/weather`;
 
 
 export async function getWeatherData(cityName: string) {
@@ -25,6 +27,7 @@ export async function getWeatherData(cityName: string) {
         icon: convertIconPath(data.weather[0].icon),
         date: convertTime(data.dt)
       }
+
       return weatherData
     }
   } catch (error) {

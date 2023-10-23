@@ -54,4 +54,12 @@ const store = useWeatherData();
   font-size: 14px;
   margin-bottom: 10px;
 }
+
+@media (max-width: 1040px) {
+  .weather__review {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
 </style>
