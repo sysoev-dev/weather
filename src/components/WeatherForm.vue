@@ -18,9 +18,19 @@ async function handleSubmitForm() {
 
 <template>
   <div>
-    <form class="weather__form" action="#" method="get" @submit.prevent="handleSubmitForm">
-      <input v-model="inputText" class="weather__form-input" type="search" name="search-input"
-        placeholder="Введите город">
+    <form
+      class="weather__form"
+      action="#"
+      method="get"
+      @submit.prevent="handleSubmitForm"
+    >
+      <input
+        v-model="inputText"
+        class="weather__form-input"
+        type="search"
+        name="search-input"
+        placeholder="Введите город"
+      >
       <button class="weather__form-button" type="submit">
         <IconSearch />
         Найти

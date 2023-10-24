@@ -1,13 +1,9 @@
 export function roundValue(value: number) {
-  return Math.round(value)
+  return Math.round(value);
 }
 
 export function convertTime(utcTime: number) {
   const date = new Date(utcTime * 1000);
-
-  let hours;
-  let minutes;
-
   return `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
 }
 
