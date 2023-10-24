@@ -3,7 +3,6 @@ import WeatherForm from './WeatherForm.vue';
 import { useWeatherData } from '@/stores/weather-data';
 
 const store = useWeatherData();
-
 </script>
 
 <template>
@@ -20,7 +19,7 @@ const store = useWeatherData();
       {{ store.data.city }}
     </p>
     <p class="weather__review-date">
-      {{ store.data.date }}
+      Updated: {{ store.data.date }}
     </p>
   </div>
 </template>

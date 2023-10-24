@@ -14,7 +14,7 @@ export const useWeatherData = defineStore('weatherData', () => {
     pressure: 787,
     sunrise: '07:00',
     sunset: '22:00',
-    icon: 'https://openweathermap.org/img/wn/04n@2x.png',
+    icon: 'https://openweathermap.org/img/wn/04d@2x.png',
     date: '00:00'
   })
 
