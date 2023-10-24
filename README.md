@@ -11,6 +11,7 @@
 - [Pinia](https://pinia-ru.netlify.app/)
 - [Vite](https://vitejs.dev/)
 - [API OpenWeather](https://tailwindcss.com/)
+- Адаптивная верстка
 
 ## Запуск проекта
 Клонировать репозиторий
