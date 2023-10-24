@@ -10,7 +10,7 @@ const store = useWeatherData()
 onMounted(async () => {
   const cityName = storage.getCurrentCity();
   const weatherData = await getWeatherData(cityName);
-  store.data = weatherData;
+  store.data = {...weatherData};
 })
 
 </script>

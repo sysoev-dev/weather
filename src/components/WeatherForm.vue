@@ -10,8 +10,8 @@ const inputText = ref('')
 
 async function handleSubmitForm() {
   const cityName = inputText.value;
-  const weatherData = getWeatherData(cityName);
-  store.data = await weatherData;
+  const weatherData = await getWeatherData(cityName);
+  store.data = {...weatherData};
   inputText.value = '';
 }
 </script>
